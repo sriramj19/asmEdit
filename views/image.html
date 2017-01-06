@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <div class="navbar navbar-info">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Angular Starter</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="list-group" ng-controller="ImagesController">
+      <div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+    ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
+    ngf-resize="{width: 100, height: 100}">Select</div>
+      <button type ="submit" ng-click="img()">Submit</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="panel panel-default" ng-controller="SearchController">
+  <div class="navbar navbar-info">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Angular Starter</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="list-group">
+      <form ng-submit="reply()">
+      <input type="text" name="name" value="" ng-model="searchData.name">
+      <input type="text" name="occasion" value="" ng-model="searchData.occasion">
+      <button type="submit" name="button">Submit</button>
+      </form>
+      <p ng-repeat="x in test"  ng-if="x">
+          {{x}}<br>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="panel panel-default" ng-controller="Wish_FormController">
+  <div class="navbar navbar-info">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Angular Starter</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="list-group">
+      <form ng-submit = "processForm()">
+
+    <input type = "text" ng-model = "formData.name" placeholder="What do we call you?" required>
+    <input type = "text" ng-model = "formData.occasion" placeholder="Say Birthday or Diwali..." requried>
+    <input type = "text" ng-model = "formData.description" placeholder="Tell us something about you...">
+    <input type = "text" ng-model = "formData.item1Name" placeholder="What gift do you want???" required>
+      <div class="button" ngf-select ng-model="item1Image" name="file1" ngf-pattern="'image/*'"
+    ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
+    ngf-resize="{width: 260, height: 227}" type="button" >Select</div>
+      <!-- <button ng-click="img(item1Image,1)">Submit</button> -->
+    <input type = "float" ng-model = "formData.item1Amount" placeholder="How much is the estimated cost???" ng-click="img(item1Image,1)" required>
+    <span id = "additionalFields"></span>
+    <div id="item2Image" style="display:none">
+      <div class="button" ngf-select ng-model="item2Image" name="item2Image" ngf-pattern="'image/*'"
+    ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
+    ngf-resize="{width: 260, height: 227}">Select</div>
+      <button ng-click="img(item2Image,2)">Submit</button>
+    </div>
+    <div id="item3Image" style="display:none">
+      <div class="button" ngf-select ng-model="item3Image" name="item3Image" ngf-pattern="'image/*'"
+    ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
+    ngf-resize="{width: 260, height: 227}">Select</div>
+      <button ng-click="img(item3Image,3)">Submit</button>
+    </div>
+    <input type = "button" onclick="addInputFields()" value = "Add Wishes">
+
+    <button type = "submit">Submit</button>
+  </form>
+    </div>
+  </div>
+</div>
